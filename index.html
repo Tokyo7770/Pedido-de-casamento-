@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quer casar comigo?</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Quer casar comigo, meu amor?</h1>
+    <div class="botoes">
+      <button id="sim" onclick="window.location.href='mensagem.html'">Sim!</button>
+      <button id="nao">Não</button>
+    </div>
+  </div>
+
+  <script>
+    const btnNao = document.getElementById("nao");
+
+    btnNao.addEventListener("mouseover", () => {
+      const i = Math.floor(Math.random() * window.innerWidth - 100);
+      const j = Math.floor(Math.random() * window.innerHeight - 100);
+      btnNao.style.position = "absolute";
+      btnNao.style.left = i + "px";
+      btnNao.style.top = j + "px";
+    });
+  </script>
+</body>
+</html>
